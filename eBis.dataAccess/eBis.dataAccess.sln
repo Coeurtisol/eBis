@@ -4,8 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eBis.dataAccess", "eBis.dataAccess.csproj", "{376B1B1C-121E-4CC1-88D4-B7EA51C23825}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A853E803-A92E-47C2-864E-3DD3C80F8445} = {A853E803-A92E-47C2-864E-3DD3C80F8445}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eBis.common", "..\eBis.common\eBis.common.csproj", "{A853E803-A92E-47C2-864E-3DD3C80F8445}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eBis.common", "..\eBis.common\eBis.common.csproj", "{A853E803-A92E-47C2-864E-3DD3C80F8445}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
