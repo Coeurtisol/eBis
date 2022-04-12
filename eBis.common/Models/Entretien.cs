@@ -17,7 +17,7 @@ namespace eBis.common.Models
         public string PositionBorne { get; set; }
         public Technicien TechnicienEnCharge { get; set; }  
         public List<string> ElementVerifies { get; set; }
-
+        public DateTime Date { get; set; }
 
     }
 }
