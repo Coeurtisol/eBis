@@ -6,20 +6,6 @@
         xmlns:local="clr-namespace:eBis.WPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Window.Resources>
-        <Style TargetType="Button">
-            <Setter Property="Width" Value="75"/>
-            <Setter Property="Margin" Value="20"/>
-            <Setter Property="Background" Value="Black"/>
-            <Setter Property="BorderBrush" Value="#00f6ff" />
-            <Setter Property="Foreground" Value="White"/>
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="Black"/>
-                </Trigger>
-            </Style.Triggers>
-        </Style>
-    </Window.Resources>
     <Grid Background="Black">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="250"/>
@@ -28,8 +14,7 @@
 
         <StackPanel Grid.Column="1" VerticalAlignment="Center">
             <Button Content="Secteur 1"/>
-            <Button Content="Secteur 2" Cursor="Hand">
-            </Button>
+            <Button Content="Secteur 2"/>
         </StackPanel>
 
     </Grid>
