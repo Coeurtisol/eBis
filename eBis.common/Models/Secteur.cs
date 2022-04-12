@@ -15,5 +15,6 @@ namespace eBis.common.Models
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
         public string Nom { get; set; }
+
     }
 }
