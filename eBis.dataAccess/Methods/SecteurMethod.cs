@@ -9,7 +9,7 @@ using eBis.common;
 using eBis.common.Models;
 
 
-namespace eBis.dataAccess
+namespace eBis.dataAccess.Methods
 {
     public class SecteurMethod
     {

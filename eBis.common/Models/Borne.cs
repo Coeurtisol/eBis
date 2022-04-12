@@ -19,6 +19,7 @@ namespace eBis.common.Models
         public Enum TypeDeCharge { get; set; }
         public string Latitude { get; set; }
         public string Longitude { get; set; }
+        public string NomSecteur  { get; set; }
 
     }
 }
