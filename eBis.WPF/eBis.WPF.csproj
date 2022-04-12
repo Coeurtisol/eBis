@@ -1,9 +1,58 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFramework>net5.0-windows</TargetFramework>
-    <UseWPF>true</UseWPF>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="obj\Debug\net5.0-windows\.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" />
+    <Compile Include="obj\Debug\net5.0-windows\App.g.i.cs" />
+    <Compile Include="obj\Debug\net5.0-windows\eBis.WPF.AssemblyInfo.cs" />
+    <Compile Include="obj\Debug\net5.0-windows\MainWindow.g.i.cs" />
+    <Compile Include="obj\Debug\net5.0\.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" />
+    <Compile Include="obj\Debug\net5.0\eBis.WPF.AssemblyInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="obj\eBis.WPF.csproj.nuget.dgspec.json" />
+    <Content Include="obj\project.assets.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include=".vs\eBis.WPF\DesignTimeBuild\.dtbcache.v2" />
+    <None Include=".vs\eBis.WPF\v17\.futdcache.v1" />
+    <None Include=".vs\eBis.WPF\v17\.suo" />
+    <None Include="eBis.WPF.csproj" />
+    <None Include="obj\Debug\net5.0-windows\eBis.WPF.AssemblyInfoInputs.cache" />
+    <None Include="obj\Debug\net5.0-windows\eBis.WPF.assets.cache" />
+    <None Include="obj\Debug\net5.0-windows\eBis.WPF.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\net5.0-windows\eBis.WPF.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="obj\Debug\net5.0-windows\eBis.WPF_MarkupCompile.i.cache" />
+    <None Include="obj\Debug\net5.0\eBis.WPF.AssemblyInfoInputs.cache" />
+    <None Include="obj\Debug\net5.0\eBis.WPF.assets.cache" />
+    <None Include="obj\Debug\net5.0\eBis.WPF.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\net5.0\eBis.WPF.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="obj\eBis.WPF.csproj.nuget.g.props" />
+    <None Include="obj\eBis.WPF.csproj.nuget.g.targets" />
+    <None Include="obj\project.nuget.cache" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="bin\Debug\net5.0-windows\" />
+    <Folder Include="bin\Debug\net5.0\" />
+    <Folder Include="obj\Debug\net5.0-windows\refint\" />
+    <Folder Include="obj\Debug\net5.0-windows\ref\" />
+    <Folder Include="obj\Debug\net5.0\refint\" />
+    <Folder Include="obj\Debug\net5.0\ref\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+  </ItemGroup>
 
 </Project>
