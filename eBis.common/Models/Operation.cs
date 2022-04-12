@@ -17,6 +17,7 @@ namespace eBis.common.Models
         public Enum TypeDeCharge { get; set; }
         public DateTime DateDebutCharge { get; set; }
         public DateTime DateFinCharge   { get; set; }
-        public int KWConsommes { get; set; }
+        public double KWConsommes { get; set; }
+        public int NumeroBorne { get; set; }
     }
 }
