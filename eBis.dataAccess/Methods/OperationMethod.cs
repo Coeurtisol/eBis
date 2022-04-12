@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using eBis.common.Models;
+using eBis.common.Interfaces;
 using MongoDB.Driver;
 using eBis.dataAccess.Methods;
 
 namespace eBis.dataAccess.Methods
 {
-    public class OperationMethod
+    public class OperationMethod : IOperationDataProvider
     {
         private IMongoCollection<Operation> _operation;
 
