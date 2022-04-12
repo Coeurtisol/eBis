@@ -10,7 +10,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eBis.dataAccess", "eBis.dat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eBis.common", "..\eBis.common\eBis.common.csproj", "{A853E803-A92E-47C2-864E-3DD3C80F8445}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eBis.WPF", "..\eBis.WPF\eBis.WPF.csproj", "{A66FE170-12A0-4716-B4EB-48DC6D6244A3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eBis.WPF", "..\eBis.WPF\eBis.WPF.csproj", "{FC363A6E-A49A-49F6-BB7E-3E4E6E430025}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,10 +26,10 @@ Global
 		{A853E803-A92E-47C2-864E-3DD3C80F8445}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A853E803-A92E-47C2-864E-3DD3C80F8445}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A853E803-A92E-47C2-864E-3DD3C80F8445}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A66FE170-12A0-4716-B4EB-48DC6D6244A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A66FE170-12A0-4716-B4EB-48DC6D6244A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A66FE170-12A0-4716-B4EB-48DC6D6244A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A66FE170-12A0-4716-B4EB-48DC6D6244A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC363A6E-A49A-49F6-BB7E-3E4E6E430025}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC363A6E-A49A-49F6-BB7E-3E4E6E430025}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC363A6E-A49A-49F6-BB7E-3E4E6E430025}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC363A6E-A49A-49F6-BB7E-3E4E6E430025}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
