@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 using eBis.dataAccess;
 using eBis.common;
 using eBis.common.Models;
+using eBis.common.Interfaces;
 
 
 namespace eBis.dataAccess.Methods
 {
-    public class SecteurMethod
+    public class SecteurMethod : ISecteurDataProvider
     {
         private IMongoCollection<Secteur> _secteur; // accès à la collection
 
