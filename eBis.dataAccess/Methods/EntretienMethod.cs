@@ -33,7 +33,7 @@ namespace eBis.dataAccess.Methods
             
             foreach(Entretien e in getAllEntretiens())
             {
-                if (e.NumeroBorne == borne.Numero)
+                if (e.Borne.Numero == borne.Numero)
                     ettSecteur.Add(e);
             }
             return ettSecteur;

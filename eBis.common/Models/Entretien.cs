@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using MongoDB.Bson;
@@ -13,9 +14,23 @@ namespace eBis.common.Models
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
-        public int NumeroBorne { get; set; }    
-        public Technicien TechnicienEnCharge { get; set; }  
-        public List<string> ElementVerifies { get; set; }
+
+        [DataMember]
+        [BsonElement("borne")]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public Borne Borne { get; set; }
+
+        [DataMember]
+        [BsonElement("technicien")]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public Technicien TechnicienEnCharge { get; set; }
+
+        [DataMember]
+        [BsonElement("elements")]
+        public List<Enum> ElementVerifies { get; set; }
+
+        [DataMember]
+        [BsonElement("date")]
         public DateTime Date { get; set; }
 
     }

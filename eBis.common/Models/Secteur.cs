@@ -15,14 +15,9 @@ namespace eBis.common.Models
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
+
         [DataMember]
         [BsonElement("nom")]
         public string Nom { get; set; }
-
-        //[BsonConstructor]
-        //public Secteur(string nom)
-        //{
-        //    Nom = nom;
-        //}
     }
 }
