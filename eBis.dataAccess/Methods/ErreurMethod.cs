@@ -33,7 +33,7 @@ namespace eBis.dataAccess.Methods
 
             foreach (Erreur e in getAllErreurs())
             {
-                if (e.NumeroBorne == borne.Numero)
+                if (e.Borne.Numero == borne.Numero)
                     errSecteur.Add(e);
             }
             return errSecteur;
