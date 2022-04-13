@@ -1,4 +1,6 @@
-﻿using System;
+﻿using eBis.dataAccess.Methods;
+using eBis.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,19 @@ namespace eBis.WPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        private ListSecteursViewModel _viewModel;
         public MainWindow()
         {
             InitializeComponent();
+            _viewModel = new ListSecteursViewModel(new SecteurMethod());
+            DataContext = _viewModel;
+
+            Activated += MainWindow_Activated;
+        }
+
+        private void MainWindow_Activated(object sender, System.EventArgs e)
+        {
+            _viewModel.Charger();
         }
     }
 }
