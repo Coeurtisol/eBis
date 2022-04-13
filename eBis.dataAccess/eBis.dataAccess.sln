@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.1.32328.378
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eBis.dataAccess", "eBis.dataAccess.csproj", "{376B1B1C-121E-4CC1-88D4-B7EA51C23825}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -10,7 +10,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eBis.dataAccess", "eBis.dat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eBis.common", "..\eBis.common\eBis.common.csproj", "{A853E803-A92E-47C2-864E-3DD3C80F8445}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eBis.WPF", "..\eBis.WPF\eBis.WPF.csproj", "{FC363A6E-A49A-49F6-BB7E-3E4E6E430025}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eBis.WPF", "..\eBis.WPF\eBis.WPF.csproj", "{FC363A6E-A49A-49F6-BB7E-3E4E6E430025}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eBis.ViewModels", "..\eBIs.ViewModels\eBis.ViewModels.csproj", "{769FB310-DDFC-45EA-A380-6097D9782F38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "..\ConsoleApp1\ConsoleApp1.csproj", "{3361AC06-DE3A-463E-8B7D-A16A0EFF0884}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +34,14 @@ Global
 		{FC363A6E-A49A-49F6-BB7E-3E4E6E430025}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC363A6E-A49A-49F6-BB7E-3E4E6E430025}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC363A6E-A49A-49F6-BB7E-3E4E6E430025}.Release|Any CPU.Build.0 = Release|Any CPU
+		{769FB310-DDFC-45EA-A380-6097D9782F38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{769FB310-DDFC-45EA-A380-6097D9782F38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{769FB310-DDFC-45EA-A380-6097D9782F38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{769FB310-DDFC-45EA-A380-6097D9782F38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3361AC06-DE3A-463E-8B7D-A16A0EFF0884}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3361AC06-DE3A-463E-8B7D-A16A0EFF0884}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3361AC06-DE3A-463E-8B7D-A16A0EFF0884}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3361AC06-DE3A-463E-8B7D-A16A0EFF0884}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
