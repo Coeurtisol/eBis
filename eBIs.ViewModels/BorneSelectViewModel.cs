@@ -1,5 +1,6 @@
 ﻿using eBis.common.Interfaces;
 using eBis.common.Models;
+using GestionEmploye.ViewModels.Command;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -13,13 +14,20 @@ namespace eBis.ViewModels
     {
         private IBorneDataProvider _borneDataProvider;
         private IOperationDataProvider _operationDataProvider;
+        private IErreurDataProvider _erreurDataProvider;
         private BorneViewModel borneSelectionne;
+        public DelegateCommand ChargerCmd { get; }
         public ObservableCollection<BorneViewModel> Bornes { get; }
         public ObservableCollection<OperationViewModel> Operations { get; }
-        public BorneSelectViewModel(IBorneDataProvider borneDP)
+
+        public BorneSelectViewModel(IBorneDataProvider borneDP, IOperationDataProvider operationDP, IErreurDataProvider erreurDP)
         {
             _borneDataProvider = borneDP;
+            _operationDataProvider = operationDP;
+            _erreurDataProvider = erreurDP;
             Bornes = new();
+            Operations = new();
+            ChargerCmd = new DelegateCommand(ChargerOperation);
         }
 
         public BorneViewModel BorneSelectionne
@@ -44,14 +52,20 @@ namespace eBis.ViewModels
             Bornes.Clear();
             foreach (var borne in bornes)
             {
+                borne.Operations = _operationDataProvider.getOperationsByBorne(borne.Id);
+                borne.Erreurs = _erreurDataProvider.getErreursByBorne(borne.Id);
                 Bornes.Add(new BorneViewModel(borne));
+                
             }
         }
 
-        public void ChargerOperation(Borne borne)
+        public void ChargerOperation()
         {
-            var operations = _operationDataProvider.getOperationsByBorne(borne);
+            var operations = _operationDataProvider.getOperationsByBorne(BorneSelectionne.Id);
+
+
             Operations.Clear();
+            
             foreach (var operation in operations)
             {
                 Operations.Add(new OperationViewModel(operation));

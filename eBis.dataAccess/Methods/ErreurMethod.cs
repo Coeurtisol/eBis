@@ -27,13 +27,13 @@ namespace eBis.dataAccess.Methods
         }
 
         // Récupère la liste des erreurs par borne
-        public List<Erreur> getErreursByBorne(Borne borne)
+        public List<Erreur> getErreursByBorne(string borneId)
         {
             List<Erreur> errSecteur = new List<Erreur>();
 
             foreach (Erreur e in getAllErreurs())
             {
-                if (e.Borne.Numero == borne.Numero)
+                if (e.Borne == borneId)
                     errSecteur.Add(e);
             }
             return errSecteur;

@@ -17,7 +17,7 @@ namespace eBis.common.Models
 
         [DataMember]
         [BsonElement("typeIncident")]
-        public Enum TypeIncident { get; set; }
+        public string TypeIncident { get; set; }
 
         [DataMember]
         [BsonElement("details")]
@@ -26,7 +26,7 @@ namespace eBis.common.Models
         [DataMember]
         [BsonElement("borne")]
         [BsonRepresentation(BsonType.ObjectId)]
-        public Borne Borne { get; set; }
+        public string Borne { get; set; }
 
         [DataMember]
         [BsonElement("date")]

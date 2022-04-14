@@ -27,7 +27,7 @@ namespace eBis.WPF.Views
         public BorneSelectView()
         {
             InitializeComponent();
-            _viewModel = new BorneSelectViewModel(new BorneMethod());
+            _viewModel = new BorneSelectViewModel(new BorneMethod(), new OperationMethod(), new ErreurMethod());
             DataContext = _viewModel;
             _viewModel.Charger();
         }

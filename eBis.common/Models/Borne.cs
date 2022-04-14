@@ -48,5 +48,8 @@ namespace eBis.common.Models
 
         public ObjectId Secteur  { get; set; }
 
+        public List<Operation> Operations { get; set; }
+        public List<Erreur> Erreurs { get; set; }
+
     }
 }

@@ -27,13 +27,13 @@ namespace eBis.dataAccess.Methods
         }
 
         // Récupère la liste des opérations par borne
-        public List<Operation> getOperationsByBorne(Borne borne)
+        public List<Operation> getOperationsByBorne(string borneId)
         {
             List<Operation> optSecteur = new List<Operation>();
 
             foreach (Operation o in getAllOperations())
             {
-                if (o.Borne.Numero == borne.Numero)
+                if (o.Borne == borneId)
                     optSecteur.Add(o);
             }
             return optSecteur;

@@ -17,7 +17,7 @@ namespace eBis.common.Models
         public string Id { get; set; }
         [DataMember]
         [BsonElement("typeCharge")]
-        public Enum TypeDeCharge { get; set; }
+        public string TypeDeCharge { get; set; }
 
         [DataMember]
         [BsonElement("dateHeureDebut")]
@@ -34,6 +34,6 @@ namespace eBis.common.Models
         [DataMember]
         [BsonElement("borne")]
         [BsonRepresentation(BsonType.ObjectId)]
-        public Borne Borne { get; set; }
+        public string Borne { get; set; }
     }
 }
