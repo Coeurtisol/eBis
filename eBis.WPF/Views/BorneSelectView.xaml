@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:eBis.WPF.Views"
              xmlns:views="clr-namespace:eBis.WPF.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="600" d:DesignWidth="1000">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -30,45 +30,89 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <StackPanel Grid.Row="0" Grid.ColumnSpan="3" Margin="25 0 0 0">
-                <TextBlock x:Name="test" Text="{Binding BorneSelectionne.Numero}" Foreground="#14C420"/>
-                <TextBlock Text="{Binding BorneSelectionne.DateInstallation}" Foreground="#14C420"/>
-                <TextBlock Text="{Binding BorneSelectionne.DateDerniereMaintenance}" Foreground="#14C420"/>
-                <TextBlock Text="{Binding BorneSelectionne.TypeDeCharge}" Foreground="#14C420"/>
-                <TextBlock Text="{Binding BorneSelectionne.Latitude}" Foreground="#14C420"/>
-                <TextBlock Text="{Binding BorneSelectionne.Longitude}" Foreground="#14C420"/>
+            <StackPanel Grid.Row="0" Grid.ColumnSpan="3" Background="black" Margin="25 20 0 0">
+                <TextBlock Text="Informations de la borne" Foreground="#14C420" FontSize="20" HorizontalAlignment="Center"/>
+                <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                    <TextBlock Text="Numéro :  " Foreground="#cccccc"/>
+                    <TextBlock x:Name="test" Text="{Binding BorneSelectionne.Numero}" Foreground="#14C420"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                    <TextBlock Text="Date d'installation :  " Foreground="#cccccc"/>
+                    <TextBlock Text="{Binding BorneSelectionne.DateInstallation}" Foreground="#14C420"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                    <TextBlock Text="Date de la dernière maintenance :  " Foreground="#cccccc"/>
+                    <TextBlock Text="{Binding BorneSelectionne.DateDerniereMaintenance}" Foreground="#14C420"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                    <TextBlock Text="Type de charge :  " Foreground="#cccccc"/>
+                    <TextBlock Text="{Binding BorneSelectionne.TypeDeCharge}" Foreground="#14C420"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                    <TextBlock Text="Latitude :  " Foreground="#cccccc"/>
+                    <TextBlock Text="{Binding BorneSelectionne.Latitude}" Foreground="#14C420"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                    <TextBlock Text="Longitude :  " Foreground="#cccccc"/>
+                    <TextBlock Text="{Binding BorneSelectionne.Longitude}" Foreground="#14C420"/>
+                </StackPanel>
             </StackPanel>
             <StackPanel Grid.Row="1" Grid.ColumnSpan="3" HorizontalAlignment="center">
-                <TextBlock Text="Journeaux de la borne" Foreground="#00f6ff" FontSize="20"/>
+                <TextBlock Text="Journaux de la borne" Foreground="#00f6ff" FontSize="20"/>
             </StackPanel>
             <StackPanel Grid.Row="2" Grid.Column="0" Margin="10 0 0 0">
+                <TextBlock Text="Opérations" FontSize="20" HorizontalAlignment="Center" Foreground="#cccccc"/>
                 <ItemsControl ItemsSource="{Binding BorneSelectionne.Operations}" Foreground="#00f6ff">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel>
-                                <TextBlock Text="{Binding Path=TypeDeCharge}"/>
-                                <TextBlock Text="{Binding Path=DateDebutCharge}"/>
-                                <TextBlock Text="{Binding Path=DateFinCharge}"/>
-                                <TextBlock Text="{Binding Path=KWConsommes}"/>
+                            <StackPanel Margin="0 10 0 15">
+                                <StackPanel>
+                                    <TextBlock Text="Début de charge" Foreground="#cccccc"/>
+                                    <TextBlock Text="{Binding Path=DateDebutCharge}"/>
+                                </StackPanel>
+                                <StackPanel>
+                                    <TextBlock Text="Fin de charge" Foreground="#cccccc"/>
+                                    <TextBlock Text="{Binding Path=DateFinCharge}"/>
+                                </StackPanel>
+                                <StackPanel>
+                                    <TextBlock Text="Type de charge" Foreground="#cccccc"/>
+                                    <TextBlock Text="{Binding Path=TypeDeCharge}"/>
+                                </StackPanel>
+                                <StackPanel>
+                                    <TextBlock Text="kWh consommés" Foreground="#cccccc"/>
+                                    <TextBlock Text="{Binding Path=KWConsommes}"/>
+                                </StackPanel>
                             </StackPanel>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
             </StackPanel>
             <StackPanel Grid.Row="2" Grid.Column="1" Margin="10 0 0 0">
+                <TextBlock Text="Erreurs" FontSize="20" HorizontalAlignment="Center" Foreground="#cccccc"/>
                 <ItemsControl ItemsSource="{Binding BorneSelectionne.Erreurs}" Foreground="#00f6ff">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel>
-                                <TextBlock TextWrapping="wrap" Text="{Binding Path=TypeIncident}"/>
-                                <TextBlock Text="{Binding Path=DetailsIncident}"/>
-                                <TextBlock Text="{Binding Path=Date}"/>
+                            <StackPanel Margin="0 10 0 15">
+                                <StackPanel>
+                                    <TextBlock Text="Type d'incident" Foreground="#cccccc"/>
+                                    <TextBlock TextWrapping="wrap" Text="{Binding Path=TypeIncident}"/>
+                                </StackPanel>
+                                <StackPanel>
+                                    <TextBlock Text="Détails" Foreground="#cccccc"/>
+                                    <TextBlock Text="{Binding Path=DetailsIncident}"/>
+                                </StackPanel>
+                                <StackPanel>
+                                    <TextBlock Text="Date" Foreground="#cccccc"/>
+                                    <TextBlock Text="{Binding Path=Date}"/>
+                                </StackPanel>
                             </StackPanel>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
             </StackPanel>
-            <StackPanel Grid.Row="2" Grid.Column="2"></StackPanel>
+            <StackPanel Grid.Row="2" Grid.Column="2">
+                <TextBlock Text="Maintenances" FontSize="20" HorizontalAlignment="Center" Foreground="#cccccc"/>
+            </StackPanel>
         </Grid>
     </Grid>
 </UserControl>
