@@ -10,6 +10,6 @@ namespace eBis.common.Interfaces
     public interface IErreurDataProvider
     {
         List<Erreur> getAllErreurs();
-        List<Erreur> getErreursByBorne(Borne borne);
+        List<Erreur> getErreursByBorne(string borneId);
     }
 }

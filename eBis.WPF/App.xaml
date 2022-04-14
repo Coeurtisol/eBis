@@ -5,8 +5,6 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <Style TargetType="Button">
-            <Setter Property="Width" Value="75"/>
-            <Setter Property="Margin" Value="20"/>
             <Setter Property="Background" Value="Black"/>
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="Cursor" Value="Hand"/>

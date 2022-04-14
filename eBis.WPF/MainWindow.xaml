@@ -7,8 +7,6 @@
         xmlns:views="clr-namespace:eBis.WPF.Views"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Window.Resources>
-    </Window.Resources>
     <Grid Background="Black">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="250" />
@@ -36,7 +34,7 @@
                           Margin="0,0,0,30" 
                           HorizontalAlignment="Center">
                 </MenuItem>
-                <MenuItem Header="Secteurs"
+                <MenuItem Header="Bornes"
                           Tag="eBis.WPF.Views.BorneSelectView"
                           Click="MenuItem_Click"
                           Foreground="#00F6FF" 

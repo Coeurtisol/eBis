@@ -15,11 +15,6 @@ namespace eBis.common.Models
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
 
-        public string NumeroBorne { get; set; }    
-        public Technicien TechnicienEnCharge { get; set; }  
-        public List<string> ElementVerifies { get; set; }
-
-
         [DataMember]
         [BsonElement("borne")]
         [BsonRepresentation(BsonType.ObjectId)]

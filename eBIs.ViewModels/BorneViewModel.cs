@@ -27,7 +27,7 @@ namespace eBis.ViewModels
         public string Numero
         {
             get => _borne.Numero;
-        } 
+        }
 
         public DateTime DateInstallation
         {
@@ -57,6 +57,16 @@ namespace eBis.ViewModels
         public Object Secteur
         {
             get => _borne.Secteur;
+        }
+
+        public List<Operation> Operations
+        {
+            get =>_borne.Operations;
+        }
+
+        public List<Erreur> Erreurs
+        {
+            get => _borne.Erreurs;
         }
     }
 }

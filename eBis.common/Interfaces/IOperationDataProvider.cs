@@ -10,6 +10,6 @@ namespace eBis.common.Interfaces
     public interface IOperationDataProvider
     {
         List<Operation> getAllOperations();
-        List<Operation> getOperationsByBorne(Borne borne);
+        List<Operation> getOperationsByBorne(string borneId);
     }
 }
