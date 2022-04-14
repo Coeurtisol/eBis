@@ -30,7 +30,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <StackPanel Grid.Row="0" Grid.ColumnSpan="3" Background="black" Margin="25 0 0 0">
+            <StackPanel Grid.Row="0" Grid.ColumnSpan="3" Margin="25 0 0 0">
                 <TextBlock x:Name="test" Text="{Binding BorneSelectionne.Numero}" Foreground="#14C420"/>
                 <TextBlock Text="{Binding BorneSelectionne.DateInstallation}" Foreground="#14C420"/>
                 <TextBlock Text="{Binding BorneSelectionne.DateDerniereMaintenance}" Foreground="#14C420"/>

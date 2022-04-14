@@ -27,13 +27,13 @@ namespace eBis.dataAccess.Methods
         }
 
         // Récupère la liste des techniciens en fonction du secteur 
-        public List<Technicien> getTechniciensBySecteur(Secteur secteur)
+        public List<Technicien> getTechniciensBySecteur(string secteurId)
         {
             List<Technicien> tcnSecteur = new List<Technicien>();
 
             foreach (Technicien t in getAllTechniciens())
             {
-                if (t.Secteur == secteur)
+                if (t.Secteur == secteurId)
                     tcnSecteur.Add(t);
             }
             return tcnSecteur;
