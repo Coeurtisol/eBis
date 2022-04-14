@@ -35,5 +35,10 @@ namespace eBis.ViewModels
         {
             get => _technicien.Secteur;
         }
+
+        public string NomSecteur
+        {
+            get => _technicien.NomSecteur;
+        }
     }
 }

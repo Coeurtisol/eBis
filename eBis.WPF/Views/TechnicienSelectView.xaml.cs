@@ -27,7 +27,7 @@ namespace eBis.WPF.Views
         public TechnicienSelectView()
         {
             InitializeComponent();
-            _viewModel = new TechnicienSelectViewModel(new TechnicienMethod());
+            _viewModel = new TechnicienSelectViewModel(new TechnicienMethod(), new SecteurMethod());
             DataContext = _viewModel;
             _viewModel.Charger();
         }

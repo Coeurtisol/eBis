@@ -17,12 +17,23 @@
                       DisplayMemberPath="Nom" Background="#FF020000" Foreground="#FFF3A209"/>
         </StackPanel>
         <StackPanel Grid.Column="1" Margin="25 0 0 0" >
-            <TextBlock Text="Nom :" Foreground="#FFF3A209"/>
-            <TextBlock Text="{Binding TechnicienSelectionne.Nom}" Foreground="#FFF3A209"/>
-            <TextBlock Text="Prenom :" Foreground="#FFF3A209"/>
-            <TextBlock Text="{Binding TechnicienSelectionne.Prenom}" Foreground="#FFF3A209"/>
-            <TextBlock Text="Téléphone :" Foreground="#FFF3A209"/>
-            <TextBlock Text="{Binding TechnicienSelectionne.Telephone}" Foreground="#FFF3A209"/>
+            <TextBlock Text="Informations du Technicien" Foreground="#FFF3A209" FontSize="20" HorizontalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                <TextBlock Text="Nom :  " Foreground="#cccccc"/>
+                <TextBlock Text="{Binding TechnicienSelectionne.Nom}" Foreground="#FFF3A209"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                <TextBlock Text="Prenom :  " Foreground="#cccccc"/>
+                <TextBlock Text="{Binding TechnicienSelectionne.Prenom}" Foreground="#FFF3A209"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                <TextBlock Text="Téléphone :  " Foreground="#cccccc"/>
+                <TextBlock Text="{Binding TechnicienSelectionne.Telephone}" Foreground="#FFF3A209"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                <TextBlock Text="Secteur :  " Foreground="#cccccc"/>
+                <TextBlock Text="{Binding TechnicienSelectionne.NomSecteur}" Foreground="#FFF3A209"/>
+            </StackPanel>
         </StackPanel>
 
     </Grid>

@@ -31,5 +31,7 @@ namespace eBis.common.Models
         [BsonElement("secteur")]
         [BsonRepresentation(BsonType.ObjectId)]
         public string Secteur { get; set; }
+
+        public string NomSecteur { get; set; }
     }
 }

@@ -27,7 +27,7 @@ namespace eBis.common.Models
 
         [DataMember]
         [BsonElement("elements")]
-        public List<Enum> ElementVerifies { get; set; }
+        public List<string> ElementVerifies { get; set; }
 
         [DataMember]
         [BsonElement("date")]
