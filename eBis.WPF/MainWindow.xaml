@@ -28,7 +28,7 @@
 
                 <!--// Main Menu - gauche -->
                 <MenuItem Header="Techniciens"
-                          Tag="eBis.WPF.Views.TechniciensSelectView"
+                          Tag="eBis.WPF.Views.TechnicienSelectView"
                           Click="MenuItem_Click"
                           Foreground="#00F6FF" 
                           Margin="0,0,0,30" 

@@ -10,6 +10,6 @@ namespace eBis.common.Interfaces
     public interface ITechnicienDataProvider
     {
         List<Technicien> getAllTechniciens();
-        List<Technicien> getTechniciensBySecteur(Secteur secteur);
+        List<Technicien> getTechniciensBySecteur(string secteurId);
     }
 }

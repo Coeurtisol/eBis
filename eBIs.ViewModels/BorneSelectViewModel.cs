@@ -16,7 +16,6 @@ namespace eBis.ViewModels
         private IOperationDataProvider _operationDataProvider;
         private IErreurDataProvider _erreurDataProvider;
         private BorneViewModel borneSelectionne;
-        public DelegateCommand ChargerCmd { get; }
         public ObservableCollection<BorneViewModel> Bornes { get; }
         public ObservableCollection<OperationViewModel> Operations { get; }
 
@@ -26,8 +25,6 @@ namespace eBis.ViewModels
             _operationDataProvider = operationDP;
             _erreurDataProvider = erreurDP;
             Bornes = new();
-            Operations = new();
-            ChargerCmd = new DelegateCommand(ChargerOperation);
         }
 
         public BorneViewModel BorneSelectionne
@@ -58,19 +55,5 @@ namespace eBis.ViewModels
                 
             }
         }
-
-        public void ChargerOperation()
-        {
-            var operations = _operationDataProvider.getOperationsByBorne(BorneSelectionne.Id);
-
-
-            Operations.Clear();
-            
-            foreach (var operation in operations)
-            {
-                Operations.Add(new OperationViewModel(operation));
-            }
-        }
-
     }
 }
