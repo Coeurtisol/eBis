@@ -15,7 +15,7 @@ namespace eBis.common.Models
         public string Id { get; set; }
         public Enum TypeIncident { get; set; }  
         public string DetailsIncident { get; set; }
-        public int NumeroBorne { get; set; }
+        public string NumeroBorne { get; set; }
         public DateTime Date { get; set; }
     }
 }

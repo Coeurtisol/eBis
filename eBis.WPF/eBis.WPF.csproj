@@ -8,7 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\eBis.common\eBis.common.csproj" />
     <ProjectReference Include="..\eBis.dataAccess\eBis.dataAccess.csproj" />
     <ProjectReference Include="..\eBIs.ViewModels\eBis.ViewModels.csproj" />
   </ItemGroup>

@@ -13,7 +13,7 @@ namespace eBis.common.Models
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
-        public int NumeroBorne { get; set; }    
+        public string NumeroBorne { get; set; }    
         public Technicien TechnicienEnCharge { get; set; }  
         public List<string> ElementVerifies { get; set; }
         public DateTime Date { get; set; }

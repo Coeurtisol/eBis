@@ -26,17 +26,5 @@ namespace eBis.dataAccess.Methods
             return brn;
         }
 
-        // Récupère la liste des bornes en fonction du secteur
-        public List<Borne> getBornesBySecteur(Secteur secteur)
-        {
-            List<Borne> brnSecteur = new List<Borne>();
-
-            foreach (Borne b in getAllBornes())
-            {
-                if (b.NomSecteur == secteur.Nom)
-                    brnSecteur.Add(b);
-            }
-            return brnSecteur;
-        }
     }
 }

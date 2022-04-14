@@ -18,6 +18,6 @@ namespace eBis.common.Models
         public DateTime DateDebutCharge { get; set; }
         public DateTime DateFinCharge   { get; set; }
         public double KWConsommes { get; set; }
-        public int NumeroBorne { get; set; }
+        public string NumeroBorne { get; set; }
     }
 }
