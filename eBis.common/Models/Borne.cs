@@ -16,7 +16,9 @@ namespace eBis.common.Models
         public string Id { get; set; }
         [DataMember]
         [BsonElement("numero")]
+
         public string Numero { get; set; }
+
 
         [DataMember]
         [BsonElement("dateInstallation")]
@@ -28,7 +30,9 @@ namespace eBis.common.Models
 
         [DataMember]
         [BsonElement("typeCharge")]
+
         public string TypeDeCharge { get; set; }
+
 
         [DataMember]
         [BsonElement("latitude")]
@@ -41,6 +45,8 @@ namespace eBis.common.Models
         [DataMember]
         [BsonElement("secteur")]
         [BsonRepresentation(BsonType.ObjectId)]
+
         public ObjectId Secteur  { get; set; }
+
     }
 }

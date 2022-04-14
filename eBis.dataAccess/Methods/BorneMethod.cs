@@ -25,6 +25,5 @@ namespace eBis.dataAccess.Methods
             List<Borne> brn = _borne.Find(s => true).ToList();
             return brn;
         }
-
     }
 }
