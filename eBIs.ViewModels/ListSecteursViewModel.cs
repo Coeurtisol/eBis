@@ -8,6 +8,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
+using GestionEmploye.ViewModels.Command;
 
 namespace eBis.ViewModels
 {
@@ -15,11 +16,13 @@ namespace eBis.ViewModels
     {
         private ISecteurDataProvider _secteurDataProvider;
         public ObservableCollection<SecteurViewModel> Secteurs { get; }
+        public DelegateCommand ChargerCmd { get; }
 
         public ListSecteursViewModel(ISecteurDataProvider secteurDP)
         {
             _secteurDataProvider = secteurDP;
             Secteurs = new();
+            ChargerCmd = new DelegateCommand(Charger);
         }
         public void Charger()
         {

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace eBis.WPF.ViewModels
+namespace eBis.ViewModels
 {
-    class MainWindowViewModel:ViewModelBase
+    public class MainWindowViewModel:ViewModelBase
     {
        
     }

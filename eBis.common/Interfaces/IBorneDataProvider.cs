@@ -10,6 +10,5 @@ namespace eBis.common.Interfaces
     public interface IBorneDataProvider
     {
         List<Borne> getAllBornes();
-        List<Borne> getBornesBySecteur(Secteur secteur);
     }
 }

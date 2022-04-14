@@ -1,9 +1,4 @@
-
-﻿using eBis.common.Models;
-using eBis.WPF.Views;
-﻿using eBis.dataAccess.Methods;
-using eBis.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using eBis.ViewModels;
+using eBis.dataAccess;
 
 namespace eBis.WPF
 {
@@ -25,35 +22,20 @@ namespace eBis.WPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        private ListSecteursViewModel _viewModel;
+        private MainWindowViewModel _viewModel;
+
         public MainWindow()
         {
             InitializeComponent();
-            _viewModel = new ListSecteursViewModel(new SecteurMethod());
+            _viewModel = new MainWindowViewModel();
             DataContext = _viewModel;
-
-            Activated += MainWindow_Activated;
-        }
-
-        private void MainWindow_Activated(object sender, System.EventArgs e)
-        {
-            _viewModel.Charger();
-        }
-
-        private void SecteurSelectView_Clicked(object sender, RoutedEventArgs e)
-        {
-            DataContext = new SecteurSelectView();
-        }
-
-        private void BorneSelectView_Clicked(object sender, RoutedEventArgs e)
-        {
-            DataContext = new BorneSelectView();
         }
 
         public void AfficherUserControl(UserControl uc)
         {
             zoneDeContenu.Children.Add(uc);
         }
+
         private void FermerUserControl()
         {
             zoneDeContenu.Children.Clear();
@@ -113,10 +95,10 @@ namespace eBis.WPF
             // soit le nom d'un User Control à afficher
             if (menu.Tag != null)
             {
-                cmd = menu.Tag.ToString();
-                // S'il y a un '.' c'est un User Control
-                ChargerUserControl(cmd);
+             cmd = menu.Tag.ToString();
+             // S'il y a un '.' c'est un User Control
+             ChargerUserControl(cmd);
             }
         }
-    }     
+    }
 }

@@ -4,14 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
         xmlns:uc="clr-namespace:eBis.WPF"
-        xmlns:viewmodels="clr-namespace:eBis.WPF.ViewModels"
         xmlns:views="clr-namespace:eBis.WPF.Views"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.Resources>
-        <DataTemplate x:Name="secteurSelectViewTemplate" DataType="{x:Type viewmodels:SecteurSelectViewModel}">
-            <views:SecteurSelectView DataContext="{Binding}"/>
-        </DataTemplate>
     </Window.Resources>
     <Grid Background="Black">
         <Grid.ColumnDefinitions>
@@ -34,7 +30,7 @@
 
                 <!--// Main Menu - gauche -->
                 <MenuItem Header="Techniciens"
-                          Tag="eBis.WPF.Views.SecteurSelectView"
+                          Tag="eBis.WPF.Views.TechniciensSelectView"
                           Click="MenuItem_Click"
                           Foreground="#00F6FF" 
                           Margin="0,0,0,30" 
