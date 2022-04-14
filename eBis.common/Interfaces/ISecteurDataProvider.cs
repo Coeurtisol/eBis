@@ -10,5 +10,6 @@ namespace eBis.common.Interfaces
     public interface ISecteurDataProvider
     {
         List<Secteur> getAllSecteur();
+        Secteur getSecteur(string secteurId);
     }
 }

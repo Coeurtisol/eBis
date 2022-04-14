@@ -27,5 +27,11 @@ namespace eBis.dataAccess.Methods
             List<Secteur> sctr = _secteur.Find(s => true).ToList();
             return sctr;
         }
+
+        public Secteur getSecteur(string secteurId)
+        {
+            Secteur sctr = _secteur.Find(document => document.Id == secteurId).FirstOrDefault();
+            return sctr;
+        }
     }
 }
